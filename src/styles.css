@@ -1,0 +1,16 @@
+nav * {
+    margin: 10px;
+}
+
+html{
+    margin: none;
+    padding: none;
+    display: flex;
+    align-content: flex-start;
+}
+
+.navBar{
+    width: 102%;
+    background-color: crimson;
+    padding: 2%;
+}
