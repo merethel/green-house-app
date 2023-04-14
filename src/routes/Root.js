@@ -7,7 +7,7 @@ export default function App() {
             <div className="navBar">
                 <nav>
                     <Link to="/">Hjem</Link>
-                    <Link to="/about">Målinger</Link>
+                    <Link to="/information">Informationer</Link>
                 </nav>
             </div>
             <Outlet />

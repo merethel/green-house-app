@@ -2,7 +2,7 @@ import React from "react"
 import ReactDOM from "react-dom/client"
 import Root from "./routes/Root"
 import Hjem from "./routes/Hjem"
-import Maalinger from "./routes/Maalinger"
+import Information from "./routes/Information"
 import { RouterProvider, createHashRouter } from "react-router-dom"
 
 const router = createHashRouter([
@@ -15,8 +15,8 @@ const router = createHashRouter([
                 element: <Hjem />,
             },
             {
-                path: "/Målinger",
-                element: <Maalinger />,
+                path: "/information",
+                element: <Information />,
             },
         ],
     },
