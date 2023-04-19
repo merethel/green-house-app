@@ -1,12 +1,9 @@
 {
     "arrays": [
         {
-            "array": [
-                1,
-                2,
-                3
-            ],
-            "name": "temperature"
+            "name": "temperature",
+            "temperature": "dslkjfdslf",
+            "time": 7
         },
         {
             "array": [

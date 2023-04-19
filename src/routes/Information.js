@@ -3,7 +3,6 @@ import Data from "../components/Data";
 import dummyData from '../dummyData.json'
 
 export default function Information() {
-    const newArray = ["hej", "med", "dig"]
     const [data, setData] = useState([])
     const [dataName, setDataName] = useState("")
     let dataArray = []

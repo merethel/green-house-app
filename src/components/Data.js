@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 
 function Data({ data, setDataName, setNewData }) {
-    const [activeTab, setActiveTab] = useState("tab1")
+    const [activeTab, setActiveTab] = useState("humidity")
 
     const handleTabClick = (tabName) => {
         setActiveTab(tabName)
         setDataName(tabName)
-        setNewData()
     }
 
 
@@ -18,19 +17,19 @@ function Data({ data, setDataName, setNewData }) {
                         className={activeTab === "humidity" ? "tablinks active" : "tablinks"}
                         onClick={() => handleTabClick("humidity")}
                     >
-                        Tab 1
+                        Humidity
                     </button>
                     <button
                         className={activeTab === "temperature" ? "tablinks active" : "tablinks"}
                         onClick={() => handleTabClick("temperature")}
                     >
-                        Tab 2
+                        Temperature
                     </button>
                     <button
                         className={activeTab === "co2" ? "tablinks active" : "tablinks"}
                         onClick={() => handleTabClick("co2")}
                     >
-                        Tab 3
+                        CO2
                     </button>
                 </div>
 
@@ -39,25 +38,29 @@ function Data({ data, setDataName, setNewData }) {
                     className={activeTab === "humidity" ? "tabcontent show" : "tabcontent"}
                     style={{ display: activeTab === "humidity" ? "block" : "none" }}
                 >
-                    <h3>humidity</h3>
-                    <div>
-                        {
-                            data.map(item => {
-                                return (
-                                    <>
-                                        <div className="group" key={item}>
-                                            <h3>{item}</h3>
-                                        </div>
-                                    </>
-                                )
-                            })
-                        }
+                    <div className="header-data">
+                        <h3>Humidity</h3>
                     </div>
+                    <div className="table-data">
+                        <table>
 
-                    <p>Content for Tab 1 goes here.</p>
+                            <tbody>
+                                <tr>
+                                    <th>Date and Time</th>
+                                    <th>Humidity</th>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>2</td>
+                                </tr>
+                            </tbody>
 
-
-
+                        </table>
+                    </div>
                 </div>
 
                 <div
@@ -65,21 +68,30 @@ function Data({ data, setDataName, setNewData }) {
                     className={activeTab === "temperature" ? "tabcontent show" : "tabcontent"}
                     style={{ display: activeTab === "temperature" ? "block" : "none" }}
                 >
-                    <h3>temperature</h3>
-                    <div>
-                        {
-                            data.map(item => {
-                                return (
-                                    <>
-                                        <div className="group" key={item}>
-                                            <h3>{item}</h3>
-                                        </div>
-                                    </>
-                                )
-                            })
-                        }
+                    <div className="header-data">
+                        <h3>Temperature</h3>
                     </div>
-                    <p>Content for Tab 2 goes here.</p>
+                    <div className="table-data">
+                        <table>
+
+                            <tbody>
+                                <tr>
+                                    <th>Date and Time</th>
+                                    <th>Temperature</th>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>2</td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
+
                 </div>
 
                 <div
@@ -87,23 +99,46 @@ function Data({ data, setDataName, setNewData }) {
                     className={activeTab === "co2" ? "tabcontent show" : "tabcontent"}
                     style={{ display: activeTab === "co2" ? "block" : "none" }}
                 >
-                    <h3>co2</h3>
-                    <div>
-                        {
-                            data.map(item => {
-                                return (
-                                    <>
-                                        <div className="group" key={item}>
-                                            <h3>{item}</h3>
-                                        </div>
-                                    </>
-                                )
-                            })
-                        }
+                    <div className="header-data">
+                        <h3>CO2</h3>
                     </div>
-                    <p>Content for Tab 3 goes here.</p>
+                    <div className="table-data">
+                        <table>
+
+                            <thead>
+                                <tr>
+                                    <th>Date and Time</th>
+                                    <th>CO2</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>2</td>
+                                </tr>
+                                    {
+                                        data.map(data => {
+                                            return (
+                                                <div className="group" key={data.date}>
+
+                                                        <tr>
+                                                            <td>{data.date}</td>
+                                                            <td>{data.data}</td>
+                                                        </tr>
+                                                </div>
+                                            )
+                                        })
+                                    }
+                                <tr>
+                                    <td>1</td>
+                                    <td>2</td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
                 </div>
-            </div>
+            </div >
         </>
     )
 }
