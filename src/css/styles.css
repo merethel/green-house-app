@@ -2,6 +2,7 @@ body{
     margin: 0;
     padding: 0;
     width: 100%;
+    font-size: 1.6rem;
 }
 
 html{
@@ -9,6 +10,13 @@ html{
     padding: none;
     display: flex;
     align-content: flex-start;
+    font-size: 10px;
+}
+
+
+
+nav {
+    font-size: 2rem;
 }
 
 
@@ -38,14 +46,23 @@ nav * {
 }
 
 .table-data{
-    width: 50%;
+    width: 100%;
     display: flex;
 }
+
 
 .tabconent{
     width: 100%;
     display: flex;
+    margin: 1rem;
 
+}
+
+.dataContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 

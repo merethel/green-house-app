@@ -1,4 +1,4 @@
-import "../styles.css"
+import "../css/styles.css"
 import { Link, Outlet } from "react-router-dom"
 
 export default function App() {

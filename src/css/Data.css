@@ -38,3 +38,9 @@
   .tabcontent.show {
     display: block;
   }
+
+  
+td {
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  
+}
